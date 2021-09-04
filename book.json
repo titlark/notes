@@ -1,0 +1,48 @@
+{
+    "title": "notes",
+    "description": "描述",
+    "isbn": "图书编号",
+    "author": "titlark",
+    "lang": "zh-cn",
+    "gitbook": "3.2.3",
+    "plugins": [
+        "edit-link", 
+        "-sharing",
+        "-fontsettings",
+        "code",
+        "back-to-top-button",
+        "cuav-chapters",
+        "heading-anchors",
+        "theme-fexa"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/titlark/notes/edit/main/",
+            "label": "编辑"
+        },
+        "code": {
+            "copyButtons": true
+        },
+        "theme-fexa": {
+            "search-placeholder": "输入关键字搜索",
+            "logo": "./logo.png",
+            "favicon": "./favicon.ico"
+        }
+    },
+    "variables": {
+        "themeFexa": {
+            "nav": [
+                {
+                    "url":"/java/java.html",
+                    "target":"_self",
+                    "name": "JAVA"
+                },
+                {
+                    "url":"/android/android.html",
+                    "target":"_self",
+                    "name": "Android"
+                }
+            ]
+        }
+    }
+}

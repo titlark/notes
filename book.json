@@ -1,12 +1,15 @@
 {
-    "title": "notes",
+    "title": "个人笔记",
     "description": "描述",
     "isbn": "图书编号",
     "author": "titlark",
     "lang": "zh-cn",
     "gitbook": "3.2.3",
     "plugins": [
-        "edit-link", 
+        "edit-link",
+        "-lunr",
+        "-search",
+        "search-pro",
         "-sharing",
         "-fontsettings",
         "code",
@@ -33,14 +36,29 @@
         "themeFexa": {
             "nav": [
                 {
-                    "url":"/java/java.html",
-                    "target":"_self",
+                    "url": "/notes/java/java.html",
+                    "target": "_self",
                     "name": "JAVA"
                 },
                 {
-                    "url":"/android/android.html",
-                    "target":"_self",
+                    "url": "/notes/android/android.html",
+                    "target": "_self",
                     "name": "Android"
+                },
+                {
+                    "url": "/notes/kotlin/kotlin.html",
+                    "target": "_self",
+                    "name": "Kotlin"
+                },
+                {
+                    "url": "/notes/framework/framework.html",
+                    "target": "_self",
+                    "name": "框架"
+                },
+                {
+                    "url": "/notes/tools/tools.html",
+                    "target": "_self",
+                    "name": "工具"
                 }
             ]
         }

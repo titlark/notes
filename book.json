@@ -51,6 +51,11 @@
                     "name": "Kotlin"
                 },
                 {
+                    "url": "/notes/linux/linux.html",
+                    "target": "_self",
+                    "name": "Linux"
+                },
+                {
                     "url": "/notes/framework/framework.html",
                     "target": "_self",
                     "name": "框架"

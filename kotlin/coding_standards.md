@@ -508,7 +508,13 @@ foo {
 
 尾随逗号是一系列元素的最后一项之后的逗号符号：
 
-
+```kotlin
+class Person(
+    val firstName: String,
+    val lastName: String,
+    val age: Int, // trailing comma
+)
+```
 
 
 

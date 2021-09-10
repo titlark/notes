@@ -3,7 +3,8 @@
 - [介绍](README.md)
 
 - [JAVA](java/java.md)
-  - [JAVA 基础]()
+  - [SQL语法](java/sql.md)
+  - [MySQL语法](java/mysql.md)
 - [Android](android/android.md)
 - [Kotlin](kotlin/kotlin.md)
   - [基本语法](kotlin/basic_syntax.md)

@@ -14,4 +14,5 @@
 - [框架](framework/framework.md)
 - [工具](tools/tools.md)
   - [IDEA](tools/idea/idea.md)
+  - [Sublime](tools/sublime/sublime.md)
 

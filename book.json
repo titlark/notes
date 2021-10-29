@@ -56,6 +56,11 @@
                     "name": "Linux"
                 },
                 {
+                    "url": "/notes/sql/sql.html",
+                    "target": "_self",
+                    "name": "SQL"
+                },
+                {
                     "url": "/notes/framework/framework.html",
                     "target": "_self",
                     "name": "框架"

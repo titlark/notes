@@ -16,7 +16,9 @@
         "back-to-top-button",
         "cuav-chapters",
         "heading-anchors",
-        "theme-fexa"
+        "theme-fexa",
+        "theme-comscore",
+        "splitter"
     ],
     "pluginsConfig": {
         "edit-link": {

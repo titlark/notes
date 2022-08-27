@@ -1,0 +1,35 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-cuav-chapters": "^1.0.3",
+    "gitbook-plugin-edit-link": "^2.0.2",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-heading-anchors": "^1.0.3",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-page-copyright": "^1.0.8",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-splitter": "0.0.8",
+    "gitbook-plugin-theme-comscore": "0.0.3",
+    "gitbook-plugin-theme-fexa": "^1.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titlark/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titlark/notes/issues"
+  },
+  "homepage": "https://github.com/titlark/notes#readme"
+}

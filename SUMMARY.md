@@ -23,6 +23,7 @@
   
 - [工具](tools/tools.md)
   - [IDEA](tools/idea/idea.md)
+  - [DataGrip](tools/datagrip/datagrip.md) 
   - [Navicat](tools/navicat/navicat.md) 
   - [Sublime](tools/sublime/sublime.md)
   - [Chrome](tools/chrome/chrome.md)

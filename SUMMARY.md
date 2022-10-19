@@ -27,6 +27,8 @@
   - [Navicat](tools/navicat/navicat.md) 
   - [Sublime](tools/sublime/sublime.md)
   - [Chrome](tools/chrome/chrome.md)
+  - [Github](tools/github/github.md)
+  - [Fleet](tools/fleet/fleet.md)
   
 
 - [架构设计师]()

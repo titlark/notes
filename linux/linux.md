@@ -114,6 +114,172 @@ LOGNAME=lamp
 可以看到，在不使用 `su -` 的情况下，虽然用户身份成功切换，但环境变量依旧用的是原用户的，切换并不完整。
 
 
+## 查看防火墙及开放端口
+
+
+### 查看 Linux 系统版本的命令
+
+
+#### 1. 查看Linux内核版本命令（两种方法）
+
+- `cat /proc/version`
+- `uname -a`
+
+
+#### 2. 查看Linux系统版本的命令（3种方法）
+
+- `lsb_release -a` 即可列出所有版本信息，这个命令适用于所有的 Linux 发行版，包括 RedHat、SUSE、Debian…等发行版。
+- `cat /etc/redhat-release` 这种方法只适合 Redhat 系的 Linux。
+- `cat /etc/issue` 此命令也适用于所有的 Linux 发行版。
+
+
+
+### iptables防火墙（CentOS 6）
+
+#### 1、service 方式
+
+1）查看防火墙状态：
+
+```shell
+[root@centos6 ~]# service iptables status
+```
+
+2）开启防火墙：
+
+```shell
+[root@centos6 ~]# service iptables start
+```
+
+3）关闭防火墙：
+
+```shell
+[root@centos6 ~]# service iptables stop
+```
+
+4）重启防火墙：
+
+```shell
+[root@centos6 ~]# service iptables restart
+```
+
+5）永久关闭防火墙：
+
+```shell
+[root@centos6 ~]# chkconfig iptables off
+```
+
+6）永久关闭后重启：
+
+```shell
+[root@centos6 ~]# chkconfig iptables on
+```
+
+#### 2、iptables 方式
+
+1）先进入 `init.d` 目录，命令如下：
+
+```shell
+[root@centos6 ~]# cd /etc/init.d/
+```
+
+2）查看防火墙状态：
+
+```shell
+[root@centos6 init.d]# /etc/init.d/iptables status
+```
+
+3）暂时关闭防火墙：
+
+```shell
+[root@centos6 init.d]# /etc/init.d/iptables stop
+```
+
+4）重启防火墙：
+
+```shell
+[root@centos6 init.d]# /etc/init.d/iptables restart
+```
+
+
+### firewalld 防火墙（CentOS 7）
+
+#### 1、查看 firewalld 服务状态
+
+```shell
+systemctl status firewalld
+```
+
+出现 `Active: active (running)` 高亮显示则表示是启动状态。
+
+出现 `Active: inactive (dead)` 灰色表示停止，看单词也行。
+
+#### 2、查看 firewalld 的状态
+
+```shell
+firewall-cmd --state
+```
+
+#### 3、开启、重启、关闭firewalld.service服务
+
+1）开启
+
+```shell
+service firewalld start
+```
+
+2）重启
+
+```shell
+service firewalld restart
+```
+
+3）关闭
+
+```shell
+service firewalld stop
+```
+
+#### 4、查看防火墙规则
+
+```shell
+firewall-cmd --list-all
+```
+
+#### 5、查询、开放、关闭端口
+
+1）查询端口是否开放
+
+```shell
+firewall-cmd --query-port=8080/tcp
+```
+
+2）开放80端口
+
+```shell
+firewall-cmd --permanent --add-port=80/tcp
+```
+
+3）移除端口
+
+```shell
+firewall-cmd --permanent --remove-port=8080/tcp
+```
+
+4）重启防火墙(修改配置后要重启防火墙)
+
+```shell
+firewall-cmd --reload
+```
+
+#### 6、参数解释
+
+1）firwall-cmd：是 Linux 提供的操作 firewall 的一个工具；
+2）--permanent：表示设置为持久；
+3）--add-port：标识添加的端口；
+
+
+
+
 
 
 ## 查看端口占用
@@ -122,11 +288,11 @@ LOGNAME=lamp
 Linux 查看端口占用情况的方法：
 
 1、使用 `lsof` 命令，语法格式 `lsof -i:端口号`；  
-2、使用 netstat 命令，该命令可以显示 tcp、udp 的端口和进程等相关情况，语法格式 `netstat -tunlp | grep 端口号`。
+2、使用 `netstat` 命令，该命令可以显示 tcp、udp 的端口和进程等相关情况，语法格式 `netstat -tunlp | grep 端口号`。
 
 ### lsof
 
-lsof(list open files) 是一个列出当前系统打开文件的工具。
+`lsof(list open files)` 是一个列出当前系统打开文件的工具。
 
 lsof 查看端口占用语法格式：
 
@@ -147,7 +313,7 @@ nodejs  26993 root   10u  IPv4 37999514      0t0  TCP *:8000 (LISTEN)
 
 可以看到 8000 端口已经被轻 nodejs 服务占用。
 
-lsof -i 需要 root 用户的权限来执行，如下图：
+`lsof -i` 需要 root 用户的权限来执行，如下图：
 
 ![](./images/img.png)
 
@@ -177,7 +343,7 @@ lsof -i -U     显示所有打开的端口和 UNIX domain 文件
 
 ### netstat
 
-netstat -tunlp 用于显示 tcp，udp 的端口和进程等相关情况。
+`netstat -tunlp` 用于显示 tcp，udp 的端口和进程等相关情况。
 
 netstat 查看端口占用语法格式：
 
@@ -199,15 +365,36 @@ netstat -tunlp | grep 端口号
 tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      26993/nodejs
 ```
 
-
 **更多命令：**
 
 ```shell
-netstat -ntlp   //查看当前所有tcp端口
+netstat -ntlp   // 查看当前所有tcp端口
 
-netstat -ntulp | grep 80   //查看所有80端口使用情况
+netstat -ntulp | grep 80   // 查看所有80端口使用情况
 
-netstat -ntulp | grep 3306   //查看所有3306端口使用情况
+netstat -ntulp | grep 3306   // 查看所有3306端口使用情况
+```
+
+### fuser
+
+使用 `fuser` 命令可以直接在 Linux 上查看端口被哪个进程占用了。
+
+```shell
+fuser 80/tcp
+```
+
+上面的命令查看 80 端口被哪个进程占用了。你可能会看到类似下面的结果：
+
+如果想看到详情可以加上 `-v` 开关，运行结果里会包含进程的名字：
+
+```shell
+fuser -v 80/tcp
+```
+
+如果要杀掉进程可以使用 -k 开关：
+
+```shell
+fuser -k 80/tcp
 ```
 
 

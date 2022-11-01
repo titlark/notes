@@ -42,7 +42,7 @@
 | device |  | 设备 手段 | 
 | etcetera |  | 等等 系统配置文件 | 
 | recursion |  | 递归（-R） | 
-| disrecursion |  | 不递归）（-d） | 
+| disrecursion |  | 不递归（-d） | 
 | force |  | 直接覆盖（-f） | 
 | all |  | 所有的（-a） | 
 | list |  | 列出所有信息（-l） | 

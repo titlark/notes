@@ -70,7 +70,12 @@
                 {
                     "url": "/notes/tools/tools.html",
                     "target": "_self",
-                    "name": "工具"
+                    "name": "开发工具"
+                },
+                {
+                    "url": "/notes/utilities/utilities.html",
+                    "target": "_self",
+                    "name": "实用工具"
                 }
             ]
         }

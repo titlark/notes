@@ -4,10 +4,10 @@
 ![坐标系](./images/graphics2d/img.png)
 
 
-- 1、getAscent()是FontMetrics中的一个方法，（基线-升部线的距离）
-- 2、getDescent()是FontMetrics中的一个方法，（基线-降部线的距离）
-- 3、getHeight() 是FontMetrics中的一个方法，（升部线-降部线的距离）
-- 4、g2d.drawString指定的位置是基线的位置
+- 1. getAscent() 是 FontMetrics 中的一个方法，（基线-升部线的距离）
+- 2. getDescent() 是 FontMetrics 中的一个方法，（基线-降部线的距离）
+- 3. getHeight() 是 FontMetrics 中的一个方法，（升部线-降部线的距离）
+- 4. g2d.drawString 指定的位置是基线的位置
 
 一个字体中存在着很多假想的“线”，它们决定了该字体文字的显示效果。借用一幅图片说明：
 

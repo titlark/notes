@@ -24,7 +24,7 @@
 
 - [框架](framework/framework.md)
 
-- [工具](tools/tools.md)
+- [开发工具](tools/tools.md)
     - [IDEA](tools/idea/idea.md)
     - [DataGrip](tools/datagrip/datagrip.md)
     - [Navicat](tools/navicat/navicat.md)
@@ -33,6 +33,10 @@
     - [Github](tools/github/github.md)
     - [Fleet](tools/fleet/fleet.md)
 
+- [实用工具]()
+  - [Windows](utilities/windows/windows.md)
+  - [Mac](utilities/mac/mac.md)
+  - [黑客](utilities/hacker/hacker.md)
 
 - [架构设计师]()
     - [计算机组成与体系结构](./architect/computer_composition_and_architecture.md)

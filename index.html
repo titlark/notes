@@ -24,9 +24,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    <style>
+        .hidden-content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class="book">
+    <div class="book-login">
+<!--        <h1>Enter Password to Access</h1>-->
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div class="book-content">
     <div class="header-inner">
         <!-- LOGO -->
         <div class="logo"></div>
@@ -400,7 +412,16 @@
             </div>
         </div>
     </div>
+    </div>
     <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'yourpassword') { // Replace 'yourpassword' with your actual password
+                document.getElementById('book-content').style.display = 'block';
+            } else {
+                alert('密码错误！');
+            }
+        }
         var gitbook = gitbook || [];
         gitbook.push(function () {
             gitbook.page.hasChanged({

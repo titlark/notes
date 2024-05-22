@@ -12,6 +12,6 @@ function checkUserLoginStatus() {
     const loggedIn = sessionStorage.getItem('loggedIn');
     if (!loggedIn) {
         // 可以重定向到登录页面
-        window.location.href = '/notes';
+        window.location.href = 'notes';
     }
 }

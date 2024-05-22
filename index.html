@@ -83,6 +83,7 @@
         button:hover {
             background-color: #0056b3;
         }
+
         .hidden-content {
             display: none;
         }
@@ -102,9 +103,10 @@
                     <label for="password">密码</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" >登录</button>
+                <button type="submit">登录</button>
             </form>
         </div>
+    </div>
     <div id="book-content" class="hidden-content">
         <div class="header-inner">
             <!-- LOGO -->
@@ -614,6 +616,7 @@
                 "book": {"language": ""}
             });
         });
+
         function handleSubmit(event) {
             event.preventDefault();
             var password = document.getElementById('password').value;

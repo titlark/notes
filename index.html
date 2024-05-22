@@ -91,22 +91,6 @@
 </head>
 <body>
 <div class="book">
-    <div class="container">
-        <div id="book-login" class="login-container">
-            <h2>登录</h2>
-            <form id="loginForm" onsubmit="handleSubmit(event)">
-                <div class="input-group">
-                    <label for="username">用户名</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">密码</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit">登录</button>
-            </form>
-        </div>
-    </div>
     <div id="book-content" class="hidden-content">
         <div class="header-inner">
             <!-- LOGO -->
@@ -485,6 +469,23 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="book-login" class="login-container">
+            <h2>登录</h2>
+            <form id="loginForm" onsubmit="handleSubmit(event)">
+                <div class="input-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">登录</button>
+            </form>
         </div>
     </div>
     <script>
